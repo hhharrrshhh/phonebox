@@ -73,6 +73,18 @@
             </intent-filter>
         </activity-alias>
 
+        <!-- Native Android screensaver host. The service deliberately does not dismiss keyguard. -->
+        <service
+            android:name=".PhoneBoxDreamService"
+            android:exported="true"
+            android:label="PhoneBox"
+            android:permission="android.permission.BIND_DREAM_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
         <!-- Quick Settings tile (Edit tiles › PhoneBox): opens the panel. Tiles exist from Android 7.0; below that the
              service is disabled (values/bools.xml vs values-v24). -->
         <service
