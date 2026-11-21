@@ -77,7 +77,8 @@
         <service
             android:name=".PhoneBoxDreamService"
             android:exported="true"
-            android:label="PhoneBox"
+            android:label="@string/dream_name"
+            android:description="@string/dream_description"
             android:permission="android.permission.BIND_DREAM_SERVICE">
             <intent-filter>
                 <action android:name="android.service.dreams.DreamService" />
